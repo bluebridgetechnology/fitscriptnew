@@ -1,0 +1,160 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.bg-default {
+  background-color: #D5E91A !important;
+}
+
+.btn-primary {
+  background: #D5E91A !important;
+  border-color: #D5E91A !important;
+  color: #000000 !important;
+}
+
+.form-control,
+.form-select {
+  background-color: #F4F4F4 !important;
+}
+
+.table td,
+.table th {
+  text-align: center;
+}
+
+.table th {
+  background-color: #E5EAF4 !important;
+}
+
+.table td:first-child,
+.table th:first-child {
+  text-align: left;
+  background-color: #E5EAF4 !important;
+}
+
+/* Custom CSS start */
+.table input[type="radio"] {
+  font-size: 1.3rem;
+}
+
+.profile,
+.dropdown-item {
+  cursor: pointer;
+}
+
+.PhoneInputInput {
+  background: #F4F4F4 !important;
+  border: none;
+}
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: 1;
+}
+
+.hr-text:before {
+  content: "";
+  background: linear-gradient(to right, transparent, #818078, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+
+.hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 0 0.5em;
+  line-height: 1.5em;
+  color: #818078;
+  background-color: #fcfcfa;
+}
+
+.hr-dashed {
+  height: 1px;
+  background-image: linear-gradient(90deg, #000, #000 75%, transparent 75%, transparent 100%);
+  background-size: 20px 1px;
+  border: none;
+}
+
+.overview {
+  background: #F0F0F5;
+  min-height: 100vh;
+}
+
+.overview h1,
+.overview h2,
+.overview h3,
+.overview h4,
+.overview h5,
+.overview h6 {
+  color: #41495C;
+}
+
+.overview p {
+  color: #555D70;
+}
+
+.fit-steps .col-md-2 {
+  background-image: url('/circle-numbers/dashed-line.png');
+  background-repeat: no-repeat;
+  background-position-y: 22px;
+}
+
+/* rating start */
+.pain-scale {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pain-scale li {
+  margin-right: 20px;
+  text-align: center;
+}
+
+.pain-scale li:last-child {
+  margin-right: 0;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle:hover {
+  cursor: pointer;
+  background-color: #e7f378;
+}
+
+.circle.filled {
+  background-color: #D5E91A;
+  color: #000000;
+}
+
+/* rating end */
+
+/* Custom CSS end */
