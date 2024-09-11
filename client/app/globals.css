@@ -306,10 +306,6 @@ circle {
   border-bottom: 1px solid #e0e0e0;
 }
 
-.logo-container {
-  /* Add styles for logo container if needed */
-}
-
 .header-controls {
   display: flex;
   align-items: center;
