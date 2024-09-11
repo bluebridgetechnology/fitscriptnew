@@ -15,11 +15,14 @@ export default function DashboardHeader({ setIsMobileMenuOpen }) {
   return (
     <div className="header-controls">
       <button 
-        className="btn d-md-none me-auto"
-        onClick={() => setIsMobileMenuOpen(prev => !prev)}
+        className="btn d-md-none me-2"
+        onClick={() => setIsMobileMenuOpen(true)}
       >
         <Menu size={24} />
       </button>
+      <div className="d-md-none flex-grow-1 text-center">
+        <Image src="/logo.png" width="150" height="24" alt="FITScript" />
+      </div>
       <div className="d-flex align-items-center">
         <Image src="/notification.png" className="me-3" width="50" height="45" alt="Notifications" />
         <div className="dropdown">

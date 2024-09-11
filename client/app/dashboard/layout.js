@@ -19,14 +19,14 @@ export default function DashboardLayout({ children }) {
   return (
     <div className="dashboard-container">
       <header className="dashboard-header">
-        <div className="logo-container">
+        <div className="logo-container d-none d-md-block">
           <Image src="/logo.png" width="197" height="32" alt="FITScript" />
         </div>
         <DashboardHeader setIsMobileMenuOpen={setIsMobileMenuOpen} />
       </header>
       <div className="dashboard-content">
         <DashboardSidebar isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
-        <main className="main-content">
+        <main className={`main-content ${isMobileMenuOpen ? 'd-none d-md-block' : ''}`}>
           {children}
         </main>
       </div>

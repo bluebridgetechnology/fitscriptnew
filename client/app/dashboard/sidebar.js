@@ -42,8 +42,11 @@ export default function DashboardSidebar({ isMobileMenuOpen, setIsMobileMenuOpen
   const isActive = (href) => pathname === href;
 
   return (
-    <div className={`sidebar ${isMobileMenuOpen ? 'open' : ''}`}>
-      {/* Remove the Image component for the logo from here */}
+    <div className={`sidebar ${isMobileMenuOpen ? 'open' : 'd-none d-md-block'}`}>
+      <div className="d-flex justify-content-between align-items-center mb-4 d-md-none">
+        <Image src="/logo.png" width="150" height="24" alt="FITScript" />
+        <button className="btn-close" onClick={() => setIsMobileMenuOpen(false)}></button>
+      </div>
       <h6 className="mb-3 text-muted">Main Menu</h6>
       <nav className="nav flex-column mb-4">
         {menuItems.map((item, index) => (
