@@ -2,10 +2,37 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { CircleDollarSign, Users, MoreVertical } from 'lucide-react';
+import { authenticatedFetch } from '../../utils/auth';
+import { useState, useEffect } from 'react';
 
 export default function Dashboard() {
+  const [dashboardData, setDashboardData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchDashboardData = async () => {
+      try {
+        const response = await authenticatedFetch('http://localhost:3001/api/dashboard');
+        if (response.ok) {
+          const data = await response.json();
+          setDashboardData(data);
+        } else {
+          throw new Error('Failed to fetch dashboard data');
+        }
+      } catch (error) {
+        console.error('Error fetching dashboard data:', error);
+        setError('Failed to load dashboard data. Please try again later.');
+      }
+    };
+
+    fetchDashboardData();
+  }, []);
+
+  if (error) return <div className="error-message">{error}</div>;
+  if (!dashboardData) return <div>Loading...</div>;
+
   return (
-    <div className="container-fluid py-4">
+    <div className="container-fluid py-4" style={{ backgroundColor: '#F0F0F5' }}>
       <div className="row g-4">
         <div className="col-12 col-lg-8">
           <div className="row g-4 mb-4">
